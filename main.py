@@ -2,6 +2,7 @@ from fastapi import FastAPI
 
 app = FastAPI()
 
+#creating new routes
 @app.get('/')
 def index():
     return {'data':{'name' : 'Mayuri'}}
@@ -15,7 +16,7 @@ def about():
 @app.get('/blog/unpublished')
 def unpublished():
     return {'data': 'all unpublished blogs'}
-    
+
 @app.get('/blog/{id}')
 def show(id : int):
     return {'data': id}
