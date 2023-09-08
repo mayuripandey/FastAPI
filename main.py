@@ -2,7 +2,7 @@ from fastapi import FastAPI
 
 app = FastAPI()
 
-#creating new routes
+#creating new Routes
 @app.get('/')
 def index():
     return {'data':{'name' : 'Mayuri'}}
